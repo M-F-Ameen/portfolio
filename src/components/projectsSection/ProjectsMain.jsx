@@ -1,0 +1,115 @@
+import ProjectsText from "./ProjectsText";
+import SingleProject from "./SingleProject";
+import { motion } from "framer-motion";
+import { fadeIn } from "../../framerMotion/variants";
+
+const projects = [
+  {
+    name: "Bankist App",
+    year: "Mar2022",
+    align: "right",
+    image: "../../public/images/one.jpg",
+    link: "https://your-bank-your-mony.netlify.app/",
+  },
+  {
+    name: "Bank Landing Page",
+    year: "Sept2022",
+    align: "left",
+    image: "../../public/images/two.jpg",
+    link: "https://banking-bankist-all.netlify.app/",
+  },
+  {
+    name: "Point of sale system ",
+    year: "Jan2023",
+    align: "right",
+    image: "../../public/images/three.PNG",
+    link: "#",
+  },
+  {
+    name: "Chalange me!(Game) ",
+    year: "May2024",
+    align: "left",
+    image: "../../public/images/five.jpg",
+    link: "https://roll-the-dice22.netlify.app/",
+  },
+  {
+    name: "Store filter",
+    year: "May2024",
+    align: "right",
+    image: "../../public/images/sex.png",
+    link: "https://664deeb8f8af8311ca324719--startling-chaja-0ceb98.netlify.app/",
+  },
+  {
+    name: "Password generator ",
+    year: "May2024",
+    align: "left",
+    image: "../../public/images/seven.png",
+    link: "https://effulgent-custard-d4a5d9.netlify.app/",
+  },
+  {
+    name: "Shopping store",
+    year: "May2024",
+    align: "right",
+    image: "../../public/images/eight.jpg",
+    link: "https://m-f-ameen.github.io/M26/",
+  },
+  {
+    name: "Guess my number (Game)",
+    year: "May2024",
+    align: "left",
+    image: "../../public/images/nine.jpg",
+    link: "https://guess-game22.netlify.app/",
+  },
+  {
+    name: "My Map",
+    year: "May2024",
+    align: "right",
+    image: "../../public/images/ten.jpg",
+    link: "https://your-maps.netlify.app/",
+  },
+  {
+    name: "Stripe payment",
+    year: "May2024",
+    align: "left",
+    image: "../../public/images/elevenn.png",
+    link: "https://664def03d0044e080ba6ec71--statuesque-halva-5e4289.netlify.app/",
+  },
+  {
+    name: "Age Calculator",
+    year: "May2024",
+    align: "right",
+    image: "../../public/images/twilve.png",
+    link: "https://effulgent-custard-d4a5d9.netlify.app/",
+  },
+];
+
+const ProjectsMain = () => {
+  return (
+    <div id="projects" className="max-w-[1200px] mx-auto px-4">
+      <motion.div
+        variants={fadeIn("top", 0)}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: false, amount: 0.7 }}
+      >
+        <ProjectsText />
+      </motion.div>
+      <div className="flex flex-col gap-20 max-w-[900px] mx-auto mt-12">
+        {projects.map((project, index) => {
+          return (
+            <SingleProject
+              key={index}
+              name={project.name}
+              year={project.year}
+              align={project.align}
+              image={project.image}
+              link={project.link}
+            />
+          );
+        })}
+      </div>
+    </div>
+  );
+};
+
+export default ProjectsMain;

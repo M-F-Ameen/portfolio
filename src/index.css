@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-darkBrown;
+}
+body {
+  @apply bg-darkBrown;
+}
+@keyframes pulse-opacity {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse-opacity {
+  animation: pulse-opacity 2s infinite ease-in-out;
+}
+.hexagon-container {
+  position: relative;
+  overflow: visible; /* Allows the head to be outside */
+}
+
+.hexagon {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  overflow: hidden; /* Keeps the body inside */
+  /* background-color: white; */
+  background-image: linear-gradient(
+    -225deg,
+    #010003 0%,
+    #1d0437 29%,
+    #ff1362c2 67%,
+    #fff800 100%
+  );
+}
+
+/* Image positioning: Puts the head outside the hexagon */
+.hexagon img {
+  position: absolute;
+  top: -30px; /* Moves head up */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 110%; /* Ensures proper coverage */
+  z-index: 10; /* Ensures image is above */
+}
