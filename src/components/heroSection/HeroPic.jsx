@@ -35,7 +35,7 @@ const HeroPic = () => {
         <div className="hexagon ">
           {/* Image Positioned Absolutely to Pop Out */}
           <img
-            src="../../public/images/mypic-two.png"
+            src="/images/mypic-two.png"
             alt="Mohamed Farag"
             className=" top-[-50px] left-1/2 transform -translate-x-1/2 w-[110%] object-cover"
           />
