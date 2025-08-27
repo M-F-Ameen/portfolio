@@ -5,7 +5,7 @@ const AboutMeText = () => {
     <div className="flex flex-col md:items-start sm:items-center md:text-left sm:text-center">
       <h2 className="text-6xl text-cyan mb-10">About Me</h2>
       <p>
-        I'm a Front-End Web Developer with 2 years of experience crafting
+        I'm a Front-End Web Developer with +3 years of experience crafting
         modern, high-performance, and visually stunning web applications. I
         specialize in React.js and Tailwind CSS, leveraging the latest
         technologies to build seamless, responsive, and user-friendly
